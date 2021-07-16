@@ -1,0 +1,373 @@
+<h1>12</h1>
+<!-- Bungkus Tombol Radio dalam Elemen fieldset untuk Aksesibilitas yang Lebih Baik -->
+<!-- Topik formulir berikutnya mencakup aksesibilitas tombol radio. Setiap pilihan diberikan a labeldengan foratribut yang mengikat iditem yang sesuai seperti yang tercakup dalam tantangan terakhir. Karena tombol radio sering kali datang dalam grup di mana pengguna harus memilih satu, ada cara untuk menunjukkan secara semantik bahwa pilihan adalah bagian dari satu set. -->
+
+<!-- The fieldsettag mengelilingi seluruh pengelompokan tombol radio untuk mencapai hal ini. Sering kali menggunakan legendtag untuk memberikan deskripsi pengelompokan, yang dibaca pembaca layar untuk setiap pilihan dalam fieldsetelemen. -->
+
+<!-- The fieldsetwrapper dan legendtag yang tidak diperlukan bila pilihan yang cukup jelas, seperti pilihan gender. Menggunakan a labeldengan foratribut untuk setiap tombol radio sudah cukup. -->
+
+<!-- Berikut ini contohnya: -->
+
+<form>
+    <fieldset>
+        <legend>Choose one of these three items:</legend>
+        <input id="one" type="radio" name="items" value="one">
+        <label for="one">Choice One</label><br>
+        <input id="two" type="radio" name="items" value="two">
+        <label for="two">Choice Two</label><br>
+        <input id="three" type="radio" name="items" value="three">
+        <label for="three">Choice Three</label>
+    </fieldset>
+</form>
+<!-- Cat Camper menginginkan informasi tentang level ninja penggunanya saat mereka mendaftar ke daftar emailnya. Dia telah menambahkan satu set tombol radio dan belajar dari pelajaran terakhir kami untuk menggunakan labeltag dengan foratribut untuk setiap pilihan. Pergi Camper Cat! Namun, kodenya masih membutuhkan bantuan. Ubah divtag di sekitar tombol radio menjadi fieldsettag, dan ubah ptag di dalamnya menjadi legend. -->
+
+<body>
+    <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+    </header>
+    <section>
+        <form>
+            <p>Sign up to receive Camper Cat's blog posts by email here!</p>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+
+
+            <!-- Only change code below this line -->
+            <fieldset>
+                <legend>What level ninja are you?</legend>
+                <input id="newbie" type="radio" name="levels" value="newbie">
+                <label for="newbie">Newbie Kitten</label><br>
+                <input id="intermediate" type="radio" name="levels" value="intermediate">
+                <label for="intermediate">Developing Student</label><br>
+                <input id="master" type="radio" name="levels" value="master">
+                <label for="master">Master</label>
+            </fieldset>
+            <!-- Only change code above this line -->
+
+
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </section>
+    <article>
+        <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
+        <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball
+            cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM
+            trifecta that is lasagna...</p>
+    </article>
+    <img src="samuraiSwords.jpeg" alt="">
+    <article>
+        <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+        <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both
+            cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+        </p>
+    </article>
+    <img src="samuraiSwords.jpeg" alt="">
+    <article>
+        <h2>Is Chuck Norris a Cat Person?</h2>
+        <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
+            anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a
+            cat person?...</p>
+    </article>
+    <footer>&copy; 2018 Camper Cat</footer>
+</body>
+
+<!-- ================= -->
+<h1>13</h1>
+<!-- Tambahkan Pemilih Tanggal yang Dapat Diakses -->
+<!-- Formulir sering kali menyertakan inputbidang, yang dapat digunakan untuk membuat beberapa kontrol formulir yang berbeda. The typeatribut pada elemen ini menunjukkan jenis inputelemen akan dibuat. -->
+
+<!-- Anda mungkin telah memperhatikan textdan submitmemasukkan jenis dalam tantangan sebelumnya, dan HTML5 memperkenalkan opsi untuk menentukan datebidang. Bergantung pada dukungan browser, pemilih tanggal muncul di inputbidang saat fokus, yang membuat pengisian formulir lebih mudah bagi semua pengguna. -->
+
+<!-- Untuk browser yang lebih lama, jenisnya akan default ke text, jadi ini membantu untuk menunjukkan kepada pengguna format tanggal yang diharapkan dalam teks labelatau untuk placeholderberjaga-jaga. -->
+
+<!-- Berikut ini contohnya: -->
+
+<label for="input1">Enter a date:</label>
+<input type="date" id="input1" name="input1">
+<!-- Camper Cat sedang menyiapkan turnamen Mortal Kombat dan ingin meminta pesaingnya untuk melihat tanggal yang paling cocok. Tambahkan inputtag dengan typeatribut date, idatribut pickdate, dan nameatribut date. -->
+
+<body>
+    <header>
+        <h1>Tournaments</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Mortal Kombat Tournament Survey</h2>
+            <form>
+                <p>Tell us the best date for the competition</p>
+                <label for="pickdate">Preferred Date:</label>
+
+                <!-- Only change code below this line -->
+                <input name="date" type="date" id="pickdate">
+                <!-- Only change code above this line -->
+
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>&copy; 2018 Camper Cat</footer>
+</body>
+
+<!-- ================= -->
+<h1>14</h1>
+<!-- Standarisasi Waktu dengan Atribut datetime HTML5Lulus -->
+<!-- Melanjutkan tema tanggal, HTML5 juga memperkenalkan timeelemen bersama dengan datetimeatribut untuk menstandardisasi waktu. The timeelemen merupakan elemen inline yang dapat membungkus tanggal atau waktu pada halaman. Sebuah datetimeatribut memegang format berlaku pada tanggal tersebut. Ini adalah nilai yang diakses oleh alat bantu. Ini membantu menghindari kebingungan dengan menyatakan versi standar waktu, bahkan jika itu ditulis secara informal atau sehari-hari dalam teks. -->
+
+<!-- Berikut ini contohnya: -->
+
+<p>Master Camper Cat officiated the cage match between Goro and Scorpion <time datetime="2013-02-13">last
+        Wednesday</time>, which ended in a draw.</p>
+<!-- Hasil survei Mortal Kombat Camper Cat ada di! Bungkus timetag di sekitar teks Thursday, September 15<sup>th</sup>dan tambahkan datetimeatribut ke 2016-09-15. -->
+
+<body>
+    <header>
+        <h1>Tournaments</h1>
+    </header>
+    <article>
+        <h2>Mortal Kombat Tournament Survey Results</h2>
+
+        <!-- Only change code below this line -->
+
+        <p>Thank you to everyone for responding to Master Camper Cat's survey. The best day to host the vaunted Mortal
+            Kombat tournament is <time datetime="2016-09-15">Thursday, September 15<sup>th</sup><time>. May the best
+                    ninja win!</p>
+
+        <!-- Only change code above this line -->
+
+        <section>
+            <h3>Comments:</h3>
+            <article>
+                <p>Posted by: Sub-Zero on <time datetime="2016-08-13T20:01Z">August 13<sup>th</sup></time></p>
+                <p>Johnny Cage better be there, I'll finish him!</p>
+            </article>
+            <article>
+                <p>Posted by: Doge on <time datetime="2016-08-15T08:12Z">August 15<sup>th</sup></time></p>
+                <p>Wow, much combat, so mortal.</p>
+            </article>
+            <article>
+                <p>Posted by: The Grim Reaper on <time datetime="2016-08-16T00:00Z">August 16<sup>th</sup></time></p>
+                <p>Looks like I'll be busy that day.</p>
+            </article>
+        </section>
+    </article>
+    <footer>&copy; 2018 Camper Cat</footer>
+</body>
+<!-- ============================ -->
+<h1></h1>
+<!-- Jadikan Elemen Hanya Terlihat oleh Pembaca Layar dengan Menggunakan CSS Kustom -->
+<!-- Pernahkah Anda memperhatikan bahwa semua tantangan aksesibilitas yang diterapkan sejauh ini belum menggunakan CSS apa pun? Ini menunjukkan pentingnya menggunakan kerangka dokumen logis dan tag yang bermakna secara semantik di sekitar konten Anda sebelum memperkenalkan aspek desain visual. -->
+
+<!-- Namun, keajaiban CSS juga dapat meningkatkan aksesibilitas di halaman Anda saat Anda ingin menyembunyikan konten secara visual yang dimaksudkan hanya untuk pembaca layar. Ini terjadi ketika informasi dalam format visual (seperti bagan), tetapi pengguna pembaca layar memerlukan presentasi alternatif (seperti tabel) untuk mengakses data. CSS digunakan untuk memposisikan elemen khusus pembaca layar di luar area visual jendela browser. -->
+
+<!-- Berikut adalah contoh aturan CSS yang melakukan hal ini: -->
+
+<!-- .sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+} -->
+<!-- Catatan: Pendekatan CSS berikut TIDAK akan melakukan hal yang sama: -->
+
+<!-- display: none;atau visibility: hidden;menyembunyikan konten untuk semua orang, termasuk pengguna pembaca layar -->
+<!-- Nilai nol untuk ukuran piksel, seperti width: 0px; height: 0px;menghapus elemen itu dari aliran dokumen Anda, artinya pembaca layar akan mengabaikannya -->
+<!-- Camper Cat membuat bagan batang bertumpuk yang sangat keren untuk halaman pelatihannya, dan memasukkan data ke dalam tabel untuk pengguna tunanetranya. Tabel sudah memiliki sr-onlykelas, tetapi aturan CSS belum diisi. Berikan positionsebuah absolutenilai, leftsebuah -10000pxnilai, dan widthdan heightkedua 1pxnilai-nilai. -->
+
+<head>
+    <style>
+        .sr-only {
+            position: absolute;
+            left: -10000px;
+            width: 1px;
+            height: 1px;
+            top: auto;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Training</h1>
+        <nav>
+            <ul>
+                <li><a href="#stealth">Stealth &amp; Agility</a></li>
+                <li><a href="#combat">Combat</a></li>
+                <li><a href="#weapons">Weapons</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Master Camper Cat's Beginner Three Week Training Program</h2>
+        <figure>
+            <!-- Stacked bar chart of weekly training -->
+            <p>[Stacked bar chart]</p>
+            <br />
+            <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>
+        </figure>
+        <table class="sr-only">
+            <caption>Hours of Weekly Training in Stealth, Combat, and Weapons</caption>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Stealth &amp; Agility</th>
+                    <th scope="col">Combat</th>
+                    <th scope="col">Weapons</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Week One</th>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th scope="row">Week Two</th>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <th scope="row">Week Three</th>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>13</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="stealth">
+        <h2>Stealth &amp; Agility Training</h2>
+        <article>
+            <h3>Climb foliage quickly using a minimum spanning tree approach</h3>
+        </article>
+        <article>
+            <h3>No training is NP-complete without parkour</h3>
+        </article>
+    </section>
+    <section id="combat">
+        <h2>Combat Training</h2>
+        <article>
+            <h3>Dispatch multiple enemies with multithreaded tactics</h3>
+        </article>
+        <article>
+            <h3>Goodbye, world: 5 proven ways to knock out an opponent</h3>
+        </article>
+    </section>
+    <section id="weapons">
+        <h2>Weapons Training</h2>
+        <article>
+            <h3>Swords: the best tool to literally divide and conquer</h3>
+        </article>
+        <article>
+            <h3>Breadth-first or depth-first in multi-weapon training?</h3>
+        </article>
+    </section>
+    <footer>&copy; 2018 Camper Cat</footer>
+</body>
+
+<!-- ==================== -->
+<h1></h1>
+<!-- Tingkatkan Keterbacaan dengan Teks Kontras Tinggi -->
+<!-- Kontras rendah antara warna latar depan dan latar belakang dapat membuat teks sulit dibaca. Kontras yang memadai meningkatkan keterbacaan konten Anda, tetapi apa sebenarnya yang dimaksud dengan "cukup"? -->
+
+<!-- Pedoman Aksesibilitas Konten Web (WCAG) merekomendasikan setidaknya rasio kontras 4,5 banding 1 untuk teks normal. Rasio dihitung dengan membandingkan nilai pencahayaan relatif dari dua warna. Ini berkisar dari 1:1 untuk warna yang sama, atau tanpa kontras, hingga 21:1 untuk putih melawan hitam, kontras yang paling substansial. Ada banyak alat pemeriksaan kontras yang tersedia secara online yang menghitung rasio ini untuk Anda. -->
+
+<!-- Pilihan teks abu-abu terang Camper Cat pada latar belakang putih untuk posting blog terbarunya memiliki rasio kontras 1,5:1, sehingga sulit dibaca. Ubah colorteks dari abu-abu saat ini ( #D3D3D3) menjadi abu-abu yang lebih gelap ( #636363) untuk meningkatkan rasio kontras menjadi 6:1. -->
+
+<head>
+    <style>
+        body {
+            color: #636363;
+            background-color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+    </header>
+
+    <article>
+        <h2>A Word on the Recent Catnip Doping Scandal</h2>
+        <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in
+            competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to
+            the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green
+            stuff, at the Claw of Fury tournament.</p>
+        <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external
+            influences. My own catnip use shall continue as purely recreational.</p>
+    </article>
+</body>
+
+<!-- ============== -->
+<h1></h1>
+<!-- Hindari Masalah Buta Warna dengan Menggunakan Kontras yang Cukup -->
+<!-- Warna adalah bagian besar dari desain visual, tetapi penggunaannya menimbulkan dua masalah aksesibilitas. Pertama, warna saja tidak boleh digunakan sebagai satu-satunya cara untuk menyampaikan informasi penting karena pengguna pembaca layar tidak akan melihatnya. Kedua, warna latar depan dan latar belakang membutuhkan kontras yang cukup sehingga pengguna buta warna dapat membedakannya. -->
+
+<!-- Tantangan sebelumnya meliputi memiliki alternatif teks untuk mengatasi masalah pertama. Tantangan terakhir memperkenalkan alat pemeriksaan kontras untuk membantu yang kedua. Rasio kontras yang direkomendasikan WCAG sebesar 4,5:1 berlaku untuk penggunaan warna serta kombinasi skala abu-abu. -->
+
+<!-- Pengguna buta warna mengalami kesulitan membedakan beberapa warna dari yang lain - biasanya dalam rona warna tetapi terkadang juga terang. Anda mungkin ingat rasio kontras dihitung menggunakan nilai pencahayaan relatif (atau kecerahan) dari warna latar depan dan latar belakang. -->
+
+<!-- Dalam praktiknya, rasio kontras 4,5:1 dapat dicapai dengan mengarsir (menambahkan hitam ke) warna yang lebih gelap dan mewarnai (menambahkan putih ke) warna yang lebih terang. Nuansa yang lebih gelap pada roda warna dianggap sebagai nuansa biru, ungu, magenta, dan merah, sedangkan warna yang lebih terang adalah oranye, kuning, hijau, dan biru-hijau. -->
+
+<!-- Camper Cat sedang bereksperimen dengan menggunakan warna untuk teks dan latar belakang blognya, tetapi kombinasi background-colorteks kehijauan dengan merah marunnya saat ini colormemiliki rasio kontras 2,5:1. Anda dapat dengan mudah menyesuaikan kecerahan warna karena ia mendeklarasikannya menggunakan hsl()properti CSS (yang merupakan singkatan dari hue, saturation, lightness) dengan mengubah argumen ketiga. Meningkatkan nilai background-colorlightness dari 35% menjadi 55%, dan menurunkan nilai colorlightness dari 20% menjadi 15%. Ini meningkatkan kontras menjadi 5.9:1. -->
+
+<head>
+    <style>
+        body {
+            color: hsl(0, 55%, 15%);
+            background-color: hsl(120, 25%, 55%);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+    </header>
+    <article>
+        <h2>A Word on the Recent Catnip Doping Scandal</h2>
+        <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in
+            competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to
+            the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green
+            stuff, at the Claw of Fury tournament.</p>
+        <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external
+            influences. My own catnip use shall continue as purely recreational.</p>
+    </article>
+</body>
+<!-- ============= -->
+<h1></h1>
+<!-- Hindari Masalah Buta Warna dengan Hati-hati Memilih Warna yang Menyampaikan Informasi -->
+<!-- Ada berbagai bentuk buta warna. Ini dapat berkisar dari sensitivitas yang berkurang hingga panjang gelombang cahaya tertentu hingga ketidakmampuan untuk melihat warna sama sekali. Bentuk yang paling umum adalah sensitivitas yang berkurang untuk mendeteksi sayuran hijau. -->
+
+<!-- Misalnya, jika dua warna hijau serupa adalah warna latar depan dan latar belakang konten Anda, pengguna buta warna mungkin tidak dapat membedakannya. Warna yang dekat dapat dianggap sebagai tetangga pada roda warna, dan kombinasi tersebut harus dihindari saat menyampaikan informasi penting. -->
+
+<!-- Catatan: Beberapa alat pemetik warna online menyertakan simulasi visual tentang bagaimana warna muncul untuk berbagai jenis buta warna. Ini adalah sumber yang bagus selain kalkulator pemeriksaan kontras online. -->
+
+<!-- Cat Camper sedang menguji gaya yang berbeda untuk tombol penting, tetapi teks kuning ( #FFFF33) background-colordan hijau ( #33FF33) coloradalah warna yang berdekatan pada roda warna dan hampir tidak dapat dibedakan untuk beberapa pengguna buta warna. (Keringanan serupa mereka juga gagal dalam pemeriksaan rasio kontras). Ubah teks colormenjadi biru tua ( #003366) untuk menyelesaikan kedua masalah. -->
+
+<head>
+    <style>
+        button {
+            color: #003366;
+            background-color: #FFFF33;
+            font-size: 14px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Danger!</h1>
+    </header>
+    <button>Delete Internet</button>
+</body>
