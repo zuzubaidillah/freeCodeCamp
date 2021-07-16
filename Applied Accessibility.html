@@ -371,3 +371,124 @@
     </header>
     <button>Delete Internet</button>
 </body>
+<!-- ============== -->
+<h1></h1>
+<!-- Beri Arti Tautan dengan Menggunakan Teks Tautan Deskriptif -->
+<!-- Pengguna pembaca layar memiliki berbagai opsi untuk jenis konten yang dibaca perangkat mereka. Opsi ini termasuk melompat ke (atau lebih) elemen tengara, melompat ke konten utama, atau mendapatkan ringkasan halaman dari judul. Pilihan lain adalah hanya mendengar tautan yang tersedia di halaman. -->
+
+<!-- Pembaca layar melakukan ini dengan membaca teks tautan, atau apa yang ada di antara atag jangkar ( ). Memiliki daftar tautan "klik di sini" atau "baca lebih lanjut" tidak membantu. Sebagai gantinya, gunakan teks singkat namun deskriptif di dalam atag untuk memberikan lebih banyak makna bagi pengguna ini. -->
+
+<!-- Teks tautan yang digunakan Camper Cat tidak terlalu deskriptif tanpa konteks di sekitarnya. Pindahkan atag anchor ( ) sehingga mereka membungkus teks information about batteriesbukan Click here. -->
+
+<body>
+    <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+    </header>
+    <article>
+        <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+        <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both
+            cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near.
+            Click here for <a href="">information about batteries</a></p>
+    </article>
+</body>
+<!-- ============ -->
+<h1></h1>
+<!-- Jadikan Tautan Dapat Dinavigasi dengan Tombol Akses HTMLLulus -->
+<!-- HTML menawarkan accesskeyatribut untuk menentukan tombol pintasan untuk mengaktifkan atau membawa fokus ke elemen. Menambahkan accesskeyatribut dapat membuat navigasi lebih efisien untuk pengguna keyboard saja. -->
+
+<!-- HTML5 memungkinkan atribut ini untuk digunakan pada elemen apa pun, tetapi ini sangat berguna jika digunakan dengan elemen interaktif. Ini termasuk tautan, tombol, dan kontrol formulir. -->
+
+<!-- Berikut ini contohnya: -->
+
+<button accesskey="b">Important Button</button>
+<!-- Cat Camper ingin tautan di sekitar dua judul artikel blog memiliki pintasan keyboard sehingga pengguna situsnya dapat dengan cepat menavigasi ke cerita lengkapnya. Tambahkan accesskeyatribut ke kedua tautan dan atur yang pertama ke g(untuk Garfield) dan yang kedua ke c(untuk Chuck Norris). -->
+
+<body>
+    <header>
+        <h1>Deep Thoughts with Master Camper Cat</h1>
+    </header>
+    <article>
+
+
+        <h2><a id="first" href="#">The Garfield Files: Lasagna as Training Fuel?</a></h2>
+
+
+        <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball
+            cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM
+            trifecta that is lasagna...</p>
+    </article>
+    <article>
+
+
+        <h2><a id="second" href="#">Is Chuck Norris a Cat Person?</a></h2>
+
+
+        <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
+            anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a
+            cat person?...</p>
+    </article>
+    <footer>&copy; 2018 Camper Cat</footer>
+</body>
+<!-- ============ -->
+<h1></h1>
+<!-- Gunakan tabindex untuk Menentukan Urutan Fokus Keyboard untuk Beberapa Elemen -->
+<!-- The tabindexAtribut juga menentukan urutan tab yang tepat dari elemen. Ini dicapai ketika nilai atribut diatur ke angka positif 1 atau lebih tinggi. -->
+
+<!-- Menyetel a tabindex="1"akan membawa fokus keyboard ke elemen itu terlebih dahulu. Kemudian siklus melalui urutan tabindexnilai yang ditentukan (2, 3, dll.), sebelum pindah ke default dan tabindex="0"item. -->
+
+<!-- Penting untuk dicatat bahwa ketika urutan tab diatur dengan cara ini, itu menimpa urutan default (yang menggunakan sumber HTML). Hal ini dapat membingungkan pengguna yang mengharapkan untuk memulai navigasi dari bagian atas halaman. Teknik ini mungkin diperlukan dalam beberapa keadaan, tetapi dalam hal aksesibilitas, berhati-hatilah sebelum menerapkannya. -->
+
+<!-- Berikut ini contohnya: -->
+
+<div tabindex="1">I get keyboard focus, and I get it first!</div>
+<div tabindex="2">I get keyboard focus, and I get it second!</div>
+<!-- Cat Camper memiliki bidang pencarian di halaman Kutipan Inspirasional yang ia rencanakan untuk ditempatkan di sudut kanan atas dengan CSS. Dia ingin kontrol pencarian inputdan pengiriman inputformulir menjadi dua item pertama dalam urutan tab. Tambahkan tabindexset atribut ke 1ke search input, dan tabindexset atribut ke 2ke submit input. -->
+
+<!-- Hal lain yang perlu diperhatikan adalah bahwa beberapa browser mungkin menempatkan Anda di tengah urutan tab ketika sebuah elemen diklik. Sebuah elemen telah ditambahkan ke halaman yang memastikan Anda akan selalu memulai dari awal urutan tab Anda. -->
+
+<body>
+    <div tabindex="1" class="overlay"></div>
+    <header>
+        <h1>Even Deeper Thoughts with Master Camper Cat</h1>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Training</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form>
+        <label for="search">Search:</label>
+
+
+        <input tabindex="1" type="search" name="search" id="search">
+        <input tabindex="2" type="submit" name="submit" value="Submit" id="submit">
+
+
+    </form>
+    <h2>Inspirational Quotes</h2>
+    <blockquote>
+        <p>&ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br>
+            - Chuck Norris</p>
+    </blockquote>
+    <blockquote>
+        <p>&ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br>
+            - TMNT</p>
+    </blockquote>
+    <footer>&copy; 2018 Camper Cat</footer>
+</body>
+<style>
+    body {
+        height: 100%;
+        margin: 0 !important;
+        padding: 8px;
+    }
+
+    .overlay {
+        margin: -8px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+</style>
