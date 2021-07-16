@@ -969,3 +969,36 @@ Tambahkan properti CSS orderke keduanya #box-1dan #box-2. Berikan #box-1nilai 2d
     <div id="box-1"></div>
     <div id="box-2"></div>
 </div>
+<!-- ================= -->
+<h1></h1>
+Gunakan Properti align-self
+Properti terakhir untuk item fleksibel adalah align-self. Properti ini memungkinkan Anda untuk menyesuaikan perataan setiap item satu per satu, alih-alih mengatur semuanya sekaligus. Ini berguna karena teknik penyesuaian umum lainnya menggunakan properti CSS float, clear, dan vertical-aligntidak berfungsi pada item fleksibel.
+
+align-selfmenerima nilai yang sama dengan align-itemsdan akan menimpa nilai apa pun yang ditetapkan oleh align-itemsproperti.
+
+Tambahkan properti CSS align-selfke keduanya #box-1dan #box-2. Berikan #box-1nilai centerdan berikan #box-2nilai flex-end.
+<style>
+    #box-container {
+        display: flex;
+        height: 500px;
+    }
+
+    #box-1 {
+        background-color: dodgerblue;
+        align-self: center;
+        height: 200px;
+        width: 200px;
+    }
+
+    #box-2 {
+        background-color: orangered;
+        align-self: flex-end;
+        height: 200px;
+        width: 200px;
+    }
+</style>
+
+<div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+</div>
