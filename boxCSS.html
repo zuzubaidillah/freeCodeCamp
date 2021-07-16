@@ -1,0 +1,144 @@
+Buat Kotak CSS Pertama Anda
+Ubah elemen HTML apa pun menjadi wadah kisi dengan menyetel displaypropertinya ke grid. Ini memberi Anda kemampuan untuk menggunakan semua properti lain yang terkait dengan CSS Grid.
+
+Catatan: Dalam Grid CSS, elemen induk disebut sebagai wadah dan anak-anaknya disebut item .
+
+Ubah tampilan div dengan containerkelas menjadi grid.
+<style>
+    .d1 {
+        background: LightSkyBlue;
+    }
+
+    .d2 {
+        background: LightSalmon;
+    }
+
+    .d3 {
+        background: PaleTurquoise;
+    }
+
+    .d4 {
+        background: LightPink;
+    }
+
+    .d5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        /* Only change code below this line */
+        display: grid;
+
+        /* Only change code above this line */
+    }
+</style>
+
+<div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+</div>
+<!-- ========== -->
+<h1></h1>
+Tambahkan Kolom dengan kisi-templat-kolom
+Cukup membuat elemen kisi tidak akan membawa Anda terlalu jauh. Anda perlu mendefinisikan struktur grid juga. Untuk menambahkan beberapa kolom ke kisi, gunakan grid-template-columnsproperti pada wadah kisi seperti yang ditunjukkan di bawah ini:
+
+.container {
+    display: grid;
+    grid-template-columns: 50px 50px;
+}
+Ini akan memberi kisi Anda dua kolom yang masing-masing lebarnya 50px. Jumlah parameter yang diberikan ke grid-template-columnsproperti menunjukkan jumlah kolom dalam kisi, dan nilai setiap parameter menunjukkan lebar setiap kolom.
+
+Berikan wadah kisi tiga kolom yang masing-masing 100pxlebar.
+<style>
+    .d1 {
+        background: LightSkyBlue;
+    }
+
+    .d2 {
+        background: LightSalmon;
+    }
+
+    .d3 {
+        background: PaleTurquoise;
+    }
+
+    .d4 {
+        background: LightPink;
+    }
+
+    .d5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        /* Only change code below this line */
+        grid-template-columns: 100px 100px 100px;
+
+        /* Only change code above this line */
+    }
+</style>
+
+<div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+</div>
+<!-- ========== -->
+<h1></h1>
+Tambahkan Baris dengan baris-templat-grid
+Kisi yang Anda buat di tantangan terakhir akan mengatur jumlah baris secara otomatis. Untuk menyesuaikan baris secara manual, gunakan grid-template-rowsproperti dengan cara yang sama seperti yang Anda gunakan grid-template-columnsdi tantangan sebelumnya.
+
+Tambahkan dua baris ke kisi yang 50pxmasing-masing tinggi.
+<style>
+    .d1 {
+        background: LightSkyBlue;
+    }
+
+    .d2 {
+        background: LightSalmon;
+    }
+
+    .d3 {
+        background: PaleTurquoise;
+    }
+
+    .d4 {
+        background: LightPink;
+    }
+
+    .d5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        /* Only change code below this line */
+        grid-template-rows: 50px 50px;
+
+        /* Only change code above this line */
+    }
+</style>
+
+<div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+</div>
