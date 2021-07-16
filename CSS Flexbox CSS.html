@@ -28,3 +28,816 @@
     <div id="box-1"></div>
     <div id="box-2"></div>
 </div>
+<!-- ===================== -->
+<h1></h1>
+<!-- Tambahkan Kekuatan Super Flex ke Sematan TweetLulus -->
+<!-- Di sebelah kanan adalah embed tweet yang akan digunakan sebagai contoh praktis. Beberapa elemen akan terlihat lebih baik dengan tata letak yang berbeda. Tantangan terakhir ditunjukkan display: flex. Di sini Anda akan menambahkannya ke beberapa komponen dalam embed tweet untuk mulai menyesuaikan posisinya. -->
+
+<!-- Tambahkan properti CSS display: flexke semua item berikut - perhatikan bahwa pemilih sudah disiapkan di CSS: -->
+
+<!-- header, header's .profile-name, header's .follow-btn, header's h3dan h4, the footer, dan footer's .stats. -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        display: flex;
+    }
+
+    header .profile-thumbnail {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+    }
+
+    header .profile-name {
+        display: flex;
+        margin-left: 10px;
+    }
+
+    header .follow-btn {
+        display: flex;
+        margin: 0 0 0 auto;
+    }
+
+    header .follow-btn button {
+        border: 0;
+        border-radius: 3px;
+        padding: 5px;
+    }
+
+    header h3,
+    header h4 {
+        display: flex;
+        margin: 0;
+    }
+
+    #inner p {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    #inner hr {
+        margin: 20px 0;
+        border-style: solid;
+        opacity: 0.1;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    footer .stats {
+        display: flex;
+        font-size: 15px;
+    }
+
+    footer .stats strong {
+        font-size: 18px;
+    }
+
+    footer .stats .likes {
+        margin-left: 10px;
+    }
+
+    footer .cta {
+        margin-left: auto;
+    }
+
+    footer .cta button {
+        border: 0;
+        background: transparent;
+    }
+</style>
+<header>
+    <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture"
+        class="profile-thumbnail">
+    <div class="profile-name">
+        <h3>Quincy Larson</h3>
+        <h4>@ossia</h4>
+    </div>
+    <div class="follow-btn">
+        <button>Follow</button>
+    </div>
+</header>
+<div id="inner">
+    <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
+        you still have to work hard.</p>
+    <span class="date">1:32 PM - 12 Jan 2018</span>
+    <hr>
+</div>
+<footer>
+    <div class="stats">
+        <div class="Retweets">
+            <strong>107</strong> Retweets
+        </div>
+        <div class="likes">
+            <strong>431</strong> Likes
+        </div>
+    </div>
+    <div class="cta">
+        <button class="share-btn">Share</button>
+        <button class="retweet-btn">Retweet</button>
+        <button class="like-btn">Like</button>
+    </div>
+</footer>
+<!-- ============ -->
+<h1></h1>
+<!-- Terapkan Properti flex-direction untuk Membuat Baris di Sematkan Tweet -->
+<!-- The headerdan footerdalam contoh tweet yang embed memiliki item anak yang bisa diatur sebagai baris menggunakan flex-directionproperti. Ini memberitahu CSS untuk menyelaraskan anak-anak secara horizontal. -->
+
+<!-- Tambahkan properti CSS flex-directionke headerdan footerdan atur nilainya ke row. -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .profile-thumbnail {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+    }
+
+    header .profile-name {
+        display: flex;
+        margin-left: 10px;
+    }
+
+    header .follow-btn {
+        display: flex;
+        margin: 0 0 0 auto;
+    }
+
+    header .follow-btn button {
+        border: 0;
+        border-radius: 3px;
+        padding: 5px;
+    }
+
+    header h3,
+    header h4 {
+        display: flex;
+        margin: 0;
+    }
+
+    #inner p {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    #inner hr {
+        margin: 20px 0;
+        border-style: solid;
+        opacity: 0.1;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    footer .stats {
+        display: flex;
+        font-size: 15px;
+    }
+
+    footer .stats strong {
+        font-size: 18px;
+    }
+
+    footer .stats .likes {
+        margin-left: 10px;
+    }
+
+    footer .cta {
+        margin-left: auto;
+    }
+
+    footer .cta button {
+        border: 0;
+        background: transparent;
+    }
+</style>
+<header>
+    <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture"
+        class="profile-thumbnail">
+    <div class="profile-name">
+        <h3>Quincy Larson</h3>
+        <h4>@ossia</h4>
+    </div>
+    <div class="follow-btn">
+        <button>Follow</button>
+    </div>
+</header>
+<div id="inner">
+    <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
+        you still have to work hard.</p>
+    <span class="date">1:32 PM - 12 Jan 2018</span>
+    <hr>
+</div>
+<footer>
+    <div class="stats">
+        <div class="Retweets">
+            <strong>107</strong> Retweets
+        </div>
+        <div class="likes">
+            <strong>431</strong> Likes
+        </div>
+    </div>
+    <div class="cta">
+        <button class="share-btn">Share</button>
+        <button class="retweet-btn">Retweet</button>
+        <button class="like-btn">Like</button>
+    </div>
+</footer>
+<!-- ================== -->
+<h1></h1>
+Gunakan Properti flex-direction untuk Membuat Kolom
+Dua tantangan terakhir menggunakan flex-directionproperti yang disetel ke row. Properti ini juga dapat membuat kolom
+dengan menumpuk anak-anak wadah fleksibel secara vertikal.
+
+Tambahkan properti CSS flex-directionke #box-containerelemen, dan berikan nilai column.
+<style>
+    #box-container {
+        display: flex;
+        height: 500px;
+        flex-direction: column;
+    }
+
+    #box-1 {
+        background-color: dodgerblue;
+        width: 50%;
+        height: 50%;
+    }
+
+    #box-2 {
+        background-color: orangered;
+        width: 50%;
+        height: 50%;
+    }
+</style>
+
+<div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+</div>
+<!-- ============== -->
+<h1></h1>
+Terapkan Properti flex-direction untuk Membuat Kolom di Sematkan Tweet
+Tweet menyematkan headerdan footermenggunakan flex-directionproperti sebelumnya dengan nilai baris. Demikian pula, item
+di dalam .profile-nameelemen akan bekerja dengan baik ditumpuk sebagai kolom.
+
+Tambahkan properti CSS flex-directionke .profile-nameelemen header dan atur nilainya menjadi column.
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    header,
+    footer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .profile-thumbnail {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+    }
+
+    header .profile-name {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+
+    header .follow-btn {
+        display: flex;
+        margin: 0 0 0 auto;
+    }
+
+    header .follow-btn button {
+        border: 0;
+        border-radius: 3px;
+        padding: 5px;
+    }
+
+    header h3,
+    header h4 {
+        display: flex;
+        margin: 0;
+    }
+
+    #inner p {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    #inner hr {
+        margin: 20px 0;
+        border-style: solid;
+        opacity: 0.1;
+    }
+
+    footer .stats {
+        display: flex;
+        font-size: 15px;
+    }
+
+    footer .stats strong {
+        font-size: 18px;
+    }
+
+    footer .stats .likes {
+        margin-left: 10px;
+    }
+
+    footer .cta {
+        margin-left: auto;
+    }
+
+    footer .cta button {
+        border: 0;
+        background: transparent;
+    }
+</style>
+<header>
+    <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture"
+        class="profile-thumbnail">
+    <div class="profile-name">
+        <h3>Quincy Larson</h3>
+        <h4>@ossia</h4>
+    </div>
+    <div class="follow-btn">
+        <button>Follow</button>
+    </div>
+</header>
+<div id="inner">
+    <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
+        you still have to work hard.</p>
+    <span class="date">1:32 PM - 12 Jan 2018</span>
+    <hr>
+</div>
+<footer>
+    <div class="stats">
+        <div class="Retweets">
+            <strong>107</strong> Retweets
+        </div>
+        <div class="likes">
+            <strong>431</strong> Likes
+        </div>
+    </div>
+    <div class="cta">
+        <button class="share-btn">Share</button>
+        <button class="retweet-btn">Retweet</button>
+        <button class="like-btn">Like</button>
+    </div>
+</footer>
+<!-- =========== -->
+<h1></h1>
+Sejajarkan Elemen Menggunakan Properti justify-contentLulus
+Terkadang item fleksibel dalam wadah fleksibel tidak mengisi semua ruang di wadah. Adalah umum untuk ingin memberi tahu
+CSS cara menyelaraskan dan memberi ruang pada item fleksibel dengan cara tertentu. Untungnya, justify-contentproperti
+memiliki beberapa opsi untuk melakukan ini. Tapi pertama-tama, ada beberapa terminologi penting untuk dipahami sebelum
+meninjau opsi tersebut.
+
+Berikut adalah gambar yang berguna menunjukkan baris untuk mengilustrasikan konsep di bawah ini.
+
+Ingat bahwa pengaturan wadah fleksibel sebagai baris menempatkan item fleksibel berdampingan dari kiri ke kanan. Wadah
+fleksibel yang ditetapkan sebagai kolom menempatkan item fleksibel dalam tumpukan vertikal dari atas ke bawah. Untuk
+masing-masing, arah item flex disusun disebut sumbu utama . Untuk satu baris, ini adalah garis horizontal yang memotong
+setiap item. Dan untuk kolom, sumbu utama adalah garis vertikal melalui item.
+
+Ada beberapa opsi cara memberi spasi pada item fleksibel di sepanjang garis yang merupakan sumbu utama. Salah satu yang
+paling umum digunakan adalah justify-content: center;, yang menyelaraskan semua item fleksibel ke tengah di dalam wadah
+fleksibel. Pilihan lainnya termasuk:
+
+flex-start: menyelaraskan item ke awal wadah fleksibel. Untuk satu baris, ini mendorong item ke kiri wadah. Untuk kolom,
+ini mendorong item ke atas wadah. Ini adalah perataan default jika tidak ada justify-contentyang ditentukan.
+flex-end: menyelaraskan item ke ujung wadah fleksibel. Untuk satu baris, ini mendorong item ke kanan wadah. Untuk kolom,
+ini mendorong item ke bagian bawah wadah.
+space-between: menyelaraskan item ke tengah sumbu utama, dengan ruang ekstra ditempatkan di antara item. Item pertama
+dan terakhir didorong ke tepi wadah fleksibel. Sebagai contoh, berturut-turut barang pertama berhadapan dengan sisi kiri
+wadah, barang terakhir berhadapan dengan sisi kanan wadah, kemudian sisa ruang didistribusikan secara merata di antara
+barang-barang lainnya.
+space-around: mirip dengan space-betweentetapi item pertama dan terakhir tidak dikunci ke tepi wadah, ruang
+didistribusikan di sekitar semua item dengan setengah ruang di kedua ujung wadah fleksibel.
+space-evenly: Mendistribusikan ruang secara merata di antara item fleksibel dengan ruang penuh di kedua ujung wadah
+fleksibel
+Sebuah contoh membantu menunjukkan properti ini beraksi. Tambahkan properti CSS justify-contentke #box-containerelemen,
+dan berikan nilai center.
+
+Bonus
+Coba opsi lain untuk justify-contentproperti di editor kode untuk melihat perbedaannya. Tetapi perhatikan bahwa nilai
+centeradalah satu-satunya yang akan melewati tantangan ini.
+<style>
+    #box-container {
+        background: gray;
+        display: flex;
+        height: 500px;
+
+    }
+
+    #box-1 {
+        background-color: dodgerblue;
+        width: 25%;
+        height: 100%;
+    }
+
+    #box-2 {
+        background-color: orangered;
+        width: 25%;
+        height: 100%;
+    }
+</style>
+
+<div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+</div>
+<!-- ============== -->
+<h1></h1>
+Gunakan Properti justify-content di Tweet Embed
+Tantangan terakhir menunjukkan contoh justify-contentproperti. Untuk embed tweet, properti ini dapat diterapkan untuk
+menyelaraskan item dalam .profile-nameelemen.
+
+Tambahkan properti CSS justify-contentke .profile-nameelemen header dan atur nilainya ke salah satu opsi dari tantangan
+terakhir.
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    header,
+    footer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .profile-thumbnail {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+    }
+
+    header .profile-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+
+    header .follow-btn {
+        display: flex;
+        margin: 0 0 0 auto;
+    }
+
+    header .follow-btn button {
+        border: 0;
+        border-radius: 3px;
+        padding: 5px;
+    }
+
+    header h3,
+    header h4 {
+        display: flex;
+        margin: 0;
+    }
+
+    #inner p {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    #inner hr {
+        margin: 20px 0;
+        border-style: solid;
+        opacity: 0.1;
+    }
+
+    footer .stats {
+        display: flex;
+        font-size: 15px;
+    }
+
+    footer .stats strong {
+        font-size: 18px;
+    }
+
+    footer .stats .likes {
+        margin-left: 10px;
+    }
+
+    footer .cta {
+        margin-left: auto;
+    }
+
+    footer .cta button {
+        border: 0;
+        background: transparent;
+    }
+</style>
+<header>
+    <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture"
+        class="profile-thumbnail">
+    <div class="profile-name">
+        <h3>Quincy Larson</h3>
+        <h4>@ossia</h4>
+    </div>
+    <div class="follow-btn">
+        <button>Follow</button>
+    </div>
+</header>
+<div id="inner">
+    <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
+        you still have to work hard.</p>
+    <span class="date">1:32 PM - 12 Jan 2018</span>
+    <hr>
+</div>
+<footer>
+    <div class="stats">
+        <div class="Retweets">
+            <strong>107</strong> Retweets
+        </div>
+        <div class="likes">
+            <strong>431</strong> Likes
+        </div>
+    </div>
+    <div class="cta">
+        <button class="share-btn">Share</button>
+        <button class="retweet-btn">Retweet</button>
+        <button class="like-btn">Like</button>
+    </div>
+</footer>
+
+<!-- ================= -->
+<h1></h1>
+Sejajarkan Elemen Menggunakan Properti align-items
+The align-itemsproperti mirip dengan justify-content. Ingatlah bahwa justify-contentproperti menyelaraskan item fleksibel di sepanjang sumbu utama. Untuk baris, sumbu utama adalah garis horizontal dan untuk kolom itu adalah garis vertikal.
+
+Wadah fleksibel juga memiliki sumbu silang yang merupakan kebalikan dari sumbu utama. Untuk baris, sumbu silang adalah vertikal dan untuk kolom, sumbu silang adalah horizontal.
+
+CSS menawarkan align-itemsproperti untuk menyelaraskan item fleksibel di sepanjang sumbu silang. Untuk satu baris, ini memberi tahu CSS cara mendorong item di seluruh baris ke atas atau ke bawah di dalam wadah. Dan untuk kolom, cara mendorong semua item ke kiri atau ke kanan di dalam wadah.
+
+Nilai berbeda yang tersedia untuk align-itemsmeliputi:
+
+flex-start: menyelaraskan item ke awal wadah fleksibel. Untuk baris, ini menyelaraskan item ke bagian atas wadah. Untuk kolom, ini menyelaraskan item ke kiri wadah.
+flex-end: menyelaraskan item ke ujung wadah fleksibel. Untuk baris, ini menyelaraskan item ke bagian bawah wadah. Untuk kolom, ini menyelaraskan item di sebelah kanan wadah.
+center: menyelaraskan item ke tengah. Untuk baris, ini menyelaraskan item secara vertikal (ruang yang sama di atas dan di bawah item). Untuk kolom, ini menyelaraskannya secara horizontal (ruang yang sama di kiri dan kanan item).
+stretch: meregangkan item untuk mengisi wadah fleksibel. Misalnya, item baris direntangkan untuk mengisi wadah fleksibel dari atas ke bawah. Ini adalah nilai default jika tidak ada align-itemsnilai yang ditentukan.
+baseline: menyelaraskan item ke garis dasar mereka. Baseline adalah konsep teks, anggap itu sebagai garis tempat huruf-huruf itu duduk.
+Sebuah contoh membantu menunjukkan properti ini beraksi. Tambahkan properti CSS align-itemske #box-containerelemen, dan berikan nilai center.
+
+Bonus
+Coba opsi lain untuk align-itemsproperti di editor kode untuk melihat perbedaannya. Tetapi perhatikan bahwa nilai centeradalah satu-satunya yang akan melewati tantangan ini.
+<style>
+    #box-container {
+        background: gray;
+        display: flex;
+        height: 500px;
+        align-items: center;
+    }
+
+    #box-1 {
+        background-color: dodgerblue;
+        width: 200px;
+        font-size: 24px;
+    }
+
+    #box-2 {
+        background-color: orangered;
+        width: 200px;
+        font-size: 18px;
+    }
+</style>
+
+<div id="box-container">
+    <div id="box-1">
+        <p>Hello</p>
+    </div>
+    <div id="box-2">
+        <p>Goodbye</p>
+    </div>
+</div>
+
+<!-- =============== -->
+<h1></h1>
+Gunakan Properti align-items di Tweet Embed
+Tantangan terakhir memperkenalkan align-itemsproperti dan memberi contoh. Properti ini dapat diterapkan ke beberapa elemen embed tweet untuk menyelaraskan item fleksibel di dalamnya.
+
+Tambahkan properti CSS align-itemske .follow-btnelemen header . Tetapkan nilainya menjadi center.
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    header,
+    footer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .profile-thumbnail {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+    }
+
+    header .profile-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 10px;
+    }
+
+    header .follow-btn {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 auto;
+    }
+
+    header .follow-btn button {
+        border: 0;
+        border-radius: 3px;
+        padding: 5px;
+    }
+
+    header h3,
+    header h4 {
+        display: flex;
+        margin: 0;
+    }
+
+    #inner p {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    #inner hr {
+        margin: 20px 0;
+        border-style: solid;
+        opacity: 0.1;
+    }
+
+    footer .stats {
+        display: flex;
+        font-size: 15px;
+    }
+
+    footer .stats strong {
+        font-size: 18px;
+    }
+
+    footer .stats .likes {
+        margin-left: 10px;
+    }
+
+    footer .cta {
+        margin-left: auto;
+    }
+
+    footer .cta button {
+        border: 0;
+        background: transparent;
+    }
+</style>
+<header>
+    <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture"
+        class="profile-thumbnail">
+    <div class="profile-name">
+        <h3>Quincy Larson</h3>
+        <h4>@ossia</h4>
+    </div>
+    <div class="follow-btn">
+        <button>Follow</button>
+    </div>
+</header>
+<div id="inner">
+    <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
+        you still have to work hard.</p>
+    <span class="date">1:32 PM - 12 Jan 2018</span>
+    <hr>
+</div>
+<footer>
+    <div class="stats">
+        <div class="Retweets">
+            <strong>107</strong> Retweets
+        </div>
+        <div class="likes">
+            <strong>431</strong> Likes
+        </div>
+    </div>
+    <div class="cta">
+        <button class="share-btn">Share</button>
+        <button class="retweet-btn">Retweet</button>
+        <button class="like-btn">Like</button>
+    </div>
+</footer>
+<!-- ==================== -->
+<h1></h1>
+Gunakan Properti flex-wrap untuk Membungkus Baris atau Kolom
+CSS flexbox memiliki fitur untuk membagi item fleksibel menjadi beberapa baris (atau kolom). Secara default, wadah fleksibel akan cocok dengan semua item fleksibel. Misalnya, satu baris semua akan berada di satu baris.
+
+Namun, menggunakan flex-wrapproperti memberitahu CSS untuk membungkus item. Ini berarti item tambahan dipindahkan ke baris atau kolom baru. Titik putus di mana pembungkus terjadi tergantung pada ukuran barang dan ukuran wadah.
+
+CSS juga memiliki opsi untuk arah pembungkus:
+
+nowrap: ini adalah pengaturan default, dan tidak membungkus item.
+wrap: membungkus item ke beberapa baris dari atas ke bawah jika berada dalam baris dan dari kiri ke kanan jika berada dalam kolom.
+wrap-reverse: membungkus item ke beberapa baris dari bawah ke atas jika berada dalam baris dan dari kanan ke kiri jika berada dalam kolom.
+Tata letak saat ini memiliki terlalu banyak kotak untuk satu baris. Tambahkan properti CSS flex-wrapke #box-containerelemen, dan berikan nilai wrap.
+<style>
+    #box-container {
+        background: gray;
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+
+    #box-1 {
+        background-color: dodgerblue;
+        width: 25%;
+        height: 50%;
+    }
+
+    #box-2 {
+        background-color: orangered;
+        width: 25%;
+        height: 50%;
+    }
+
+    #box-3 {
+        background-color: violet;
+        width: 25%;
+        height: 50%;
+    }
+
+    #box-4 {
+        background-color: yellow;
+        width: 25%;
+        height: 50%;
+    }
+
+    #box-5 {
+        background-color: green;
+        width: 25%;
+        height: 50%;
+    }
+
+    #box-6 {
+        background-color: black;
+        width: 25%;
+        height: 50%;
+    }
+</style>
+
+<div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+    <div id="box-3"></div>
+    <div id="box-4"></div>
+    <div id="box-5"></div>
+    <div id="box-6"></div>
+</div>
+<!-- ================ -->
+<h1></h1>
+Gunakan Properti flex-shrink untuk Mengecilkan Item
+Sejauh ini, semua properti dalam tantangan berlaku untuk wadah fleksibel (induk dari item fleksibel). Namun, ada beberapa properti yang berguna untuk item fleksibel.
+
+Yang pertama adalah flex-shrinkproperti. Saat digunakan, ini memungkinkan item menyusut jika wadah fleksibel terlalu kecil. Item menyusut ketika lebar wadah induk lebih kecil dari lebar gabungan semua item fleksibel di dalamnya.
+
+The flex-shrinkproperti mengambil nomor sebagai nilai-nilai. Semakin tinggi angkanya, semakin menyusut dibandingkan dengan barang-barang lain di dalam wadah. Misalnya, jika satu item memiliki flex-shrinknilai 1dan yang lainnya memiliki flex-shrinknilai 3, item dengan nilai 3akan menyusut tiga kali lipat dari yang lain.
+
+Tambahkan properti CSS flex-shrinkke keduanya #box-1dan #box-2. Berikan #box-1nilai dari 1dan #box-2nilai 2.
+<style>
+    #box-container {
+        display: flex;
+        height: 500px;
+    }
+
+    #box-1 {
+        background-color: dodgerblue;
+        width: 100%;
+        height: 200px;
+        flex-shrink: 1;
+    }
+
+    #box-2 {
+        background-color: orangered;
+        width: 100%;
+        height: 200px;
+        flex-shrink: 2;
+    }
+</style>
+
+<div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+</div>
