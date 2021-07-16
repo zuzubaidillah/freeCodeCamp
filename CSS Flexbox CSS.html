@@ -903,3 +903,69 @@ Atur ukuran awal kotak menggunakan flex-basis. Tambahkan properti CSS flex-basis
     <div id="box-1"></div>
     <div id="box-2"></div>
 </div>
+<!-- ================ -->
+<h1></h1>
+Gunakan Properti Singkatan fleksibel
+Ada jalan pintas yang tersedia untuk mengatur beberapa properti fleksibel sekaligus. Properti flex-grow, flex-shrink, dan flex-basissemua dapat diatur bersama dengan menggunakan flexproperti.
+
+Misalnya, flex: 1 0 10px;akan mengatur item ke flex-grow: 1;, flex-shrink: 0;, dan flex-basis: 10px;.
+
+Pengaturan properti default adalah flex: 0 1 auto;.
+
+Tambahkan properti CSS flexke keduanya #box-1dan #box-2. Berikan #box-1nilai jadi flex-growadalah 2, yang flex-shrinkyaitu 2, dan yang flex-basisis 150px. Berikan #box-2nilai jadi flex-growadalah 1, yang flex-shrinkyaitu 1, dan yang flex-basisis 150px.
+
+Nilai-nilai ini akan menyebabkan #box-1pertumbuhan mengisi ruang ekstra dengan kecepatan dua kali lipat #box-2saat penampung lebih besar dari 300 piksel dan menyusut pada kecepatan dua kali lipat #box-2saat penampung kurang dari 300 piksel. 300px adalah ukuran gabungan dari flex-basisnilai dua kotak.
+<style>
+    #box-container {
+        display: flex;
+        height: 500px;
+    }
+
+    #box-1 {
+        background-color: dodgerblue;
+        flex: 2 2 150px;
+        height: 200px;
+    }
+
+    #box-2 {
+        background-color: orangered;
+        flex: 1 1 150px;
+        height: 200px;
+    }
+</style>
+
+<div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+</div>
+<!-- =============== -->
+<h1></h1>
+Gunakan properti pesanan untuk Mengatur Ulang Item
+The orderproperti digunakan untuk CSS menceritakan urutan bagaimana fleksibel item muncul dalam wadah fleksibel. Secara default, item akan muncul dalam urutan yang sama dengan yang ada di HTML sumber. Properti mengambil angka sebagai nilai, dan angka negatif dapat digunakan.
+
+Tambahkan properti CSS orderke keduanya #box-1dan #box-2. Berikan #box-1nilai 2dan berikan #box-2nilai 1.
+<style>
+    #box-container {
+        display: flex;
+        height: 500px;
+    }
+
+    #box-1 {
+        background-color: dodgerblue;
+        order: 2;
+        height: 200px;
+        width: 200px;
+    }
+
+    #box-2 {
+        background-color: orangered;
+        order: 1;
+        height: 200px;
+        width: 200px;
+    }
+</style>
+
+<div id="box-container">
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+</div>
