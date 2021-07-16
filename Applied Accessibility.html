@@ -492,3 +492,108 @@
         height: 100%;
     }
 </style>
+<!-- ============= -->
+<h1></h1>
+<!-- Buat Kueri Media -->
+<!-- Media Queries adalah teknik baru yang diperkenalkan di CSS3 yang mengubah presentasi konten berdasarkan ukuran viewport yang berbeda. Area pandang adalah area halaman web yang terlihat oleh pengguna, dan berbeda tergantung pada perangkat yang digunakan untuk mengakses situs. -->
+
+<!-- Kueri Media terdiri dari jenis media, dan jika jenis media tersebut cocok dengan jenis perangkat tempat dokumen ditampilkan, gaya akan diterapkan. Anda dapat memiliki banyak pemilih dan gaya di dalam kueri media sesuai keinginan. -->
+
+<!-- Berikut adalah contoh kueri media yang mengembalikan konten saat lebar perangkat kurang dari atau sama dengan 100px: -->
+
+<!-- @media (max-width: 100px) { /* CSS Rules */ } -->
+<!-- dan kueri media berikut mengembalikan konten saat tinggi perangkat lebih dari atau sama dengan 350px: -->
+
+<!-- @media (min-height: 350px) { /* CSS Rules */ } -->
+<!-- Ingat, CSS di dalam kueri media hanya diterapkan jika jenis media cocok dengan perangkat yang digunakan. -->
+
+<!-- Menambahkan permintaan media, sehingga ptag memiliki font-sizedari 10pxbila tinggi perangkat kurang dari atau sama dengan 800px. -->
+<style>
+    p {
+        font-size: 20px;
+    }
+
+    /* Only change code below this line */
+    @media (max-height: 800px) {
+        p {
+            font-size: 10px;
+        }
+    }
+
+    @media (min-height: 800px) {
+        p {
+            font-size: 10px;
+        }
+    }
+
+    /* Only change code above this line */
+</style>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+    vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+    habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem.
+    Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
+<!-- =========================== -->
+<h1></h1>
+<!-- Jadikan Gambar Responsif -->
+<!-- Membuat gambar responsif dengan CSS sebenarnya sangat sederhana. Anda hanya perlu menambahkan properti ini ke gambar: -->
+
+<!-- img {
+    max-width: 100%;
+    height: auto;
+} -->
+<!-- The max-widthof 100%akan memastikan gambar tidak pernah lebih luas dari wadah itu di, dan heightdari autoakan membuat gambar menjaga aspek rasio aslinya. -->
+
+<!-- Tambahkan aturan gaya ke responsive-imgkelas untuk membuatnya responsif. Seharusnya tidak pernah lebih lebar dari wadahnya (dalam hal ini, ini adalah jendela pratinjau) dan harus mempertahankan rasio aspek aslinya. Setelah Anda menambahkan kode, ubah ukuran pratinjau untuk melihat perilaku gambar Anda. -->
+<style>
+    .responsive-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    img {
+        width: 600px;
+    }
+</style>
+
+<img class="responsive-img" src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
+    alt="freeCodeCamp stickers set">
+<img class="responsive-img" src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
+    alt="freeCodeCamp stickers set">
+<!-- ====================== -->
+<h1></h1>
+<!-- Gunakan Gambar Retina untuk Tampilan Resolusi Lebih Tinggi -->
+<!-- Dengan bertambahnya perangkat yang terhubung ke internet, ukuran dan spesifikasinya bervariasi, dan tampilan yang mereka gunakan dapat berbeda secara eksternal dan internal. Kerapatan piksel adalah aspek yang dapat berbeda pada satu perangkat dengan perangkat lainnya dan kerapatan ini dikenal sebagai Pixel Per Inch (PPI) atau Dots Per Inch (DPI). Tampilan yang paling terkenal adalah yang dikenal sebagai "Retina Display" pada notebook Apple MacBook Pro terbaru, dan komputer iMac baru-baru ini. Karena perbedaan kerapatan piksel antara tampilan "Retina" dan "Non-Retina", beberapa gambar yang belum dibuat dengan mempertimbangkan Tampilan Resolusi Tinggi dapat terlihat "berpiksel" saat dirender pada tampilan Resolusi Tinggi. -->
+
+<!-- Cara paling sederhana untuk membuat gambar Anda muncul dengan benar di Layar Resolusi Tinggi, seperti "layar retina" MacBook Pro adalah dengan menentukan widthdan heightnilainya hanya setengah dari file aslinya. Berikut adalah contoh gambar yang hanya menggunakan setengah dari tinggi dan lebar aslinya: -->
+
+<style>
+    img {
+        height: 250px;
+        width: 250px;
+    }
+</style>
+<img src="coolPic500x500" alt="A most excellent picture">
+<!-- Setel widthdan heightdari imgtag menjadi setengah dari nilai aslinya. Dalam hal ini, baik yang asli heightmaupun yang asli widthadalah 200px. -->
+<style>
+
+</style>
+
+<img width="100" height="100" src="https://s3.amazonaws.com/freecodecamp/FCCStickers-CamperBot200x200.jpg"
+    alt="freeCodeCamp sticker that says 'Because CamperBot Cares'">
+
+<!-- ============================= -->
+<h1></h1>
+<!-- Jadikan Tipografi Responsif -->
+<!-- <!-- <!-- Alih-alih menggunakan ematau pxuntuk mengukur teks, Anda dapat menggunakan unit viewport untuk tipografi responsif. Unit viewport, seperti persentase, adalah unit relatif, tetapi didasarkan pada item yang berbeda. Unit area pandang relatif terhadap dimensi area pandang (lebar atau tinggi) perangkat, dan persentase relatif terhadap ukuran elemen penampung induk. --> --> -->
+
+<!-- Empat unit viewport yang berbeda adalah: -->
+
+<!-- vw(lebar viewport): 10vwakan menjadi 10% dari lebar viewport. -->
+<!-- vh(tinggi viewport): 3vhakan menjadi 3% dari tinggi viewport. -->
+<!-- vmin(minimum area pandang): 70vminakan menjadi 70% dari dimensi area pandang yang lebih kecil (tinggi atau lebar). -->
+<!-- vmax(maksimum area pandang): 100vmaxakan menjadi 100% dari dimensi area pandang yang lebih besar (tinggi atau lebar). -->
+<!-- Berikut adalah contoh yang menetapkan bodytag hingga 30% dari lebar viewport. -->
+
+<!-- body { width: 30vw; } -->
+<!-- Mengatur widthdari h2tag 80% dari lebar viewport dan yang widthdari ayat 75% dari dimensi viewport yang lebih kecil. -->
