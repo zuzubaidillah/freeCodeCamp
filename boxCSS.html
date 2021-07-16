@@ -201,3 +201,152 @@ Buat kotak dengan tiga kolom yang lebarnya sebagai berikut: 1fr, 100px, dan 2fr.
     <div class="d4">4</div>
     <div class="d5">5</div>
 </div>
+<!-- ========== -->
+<h1></h1>
+Buat Celah Kolom Menggunakan grid-column-gap
+Sejauh ini dalam kisi-kisi yang telah Anda buat, semua kolom telah rapat satu sama lain. Terkadang Anda menginginkan celah di antara kolom. Untuk menambahkan celah di antara kolom, gunakan grid-column-gapproperti seperti ini:
+
+grid-column-gap: 10px;
+Ini menciptakan 10px ruang kosong di antara semua kolom kita.
+
+Beri 20pxcelah pada kolom di grid .
+<style>
+    .d1 {
+        background: LightSkyBlue;
+    }
+
+    .d2 {
+        background: LightSalmon;
+    }
+
+    .d3 {
+        background: PaleTurquoise;
+    }
+
+    .d4 {
+        background: LightPink;
+    }
+
+    .d5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* Only change code below this line */
+
+        grid-column-gap: 20px;
+        /* Only change code above this line */
+    }
+</style>
+
+<div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+</div>
+<!-- =========== -->
+<h1></h1>
+Buat Kesenjangan Baris menggunakan celah baris-grid
+Anda dapat menambahkan celah di antara baris kisi menggunakan grid-row-gapcara yang sama seperti Anda menambahkan celah di antara kolom di tantangan sebelumnya.
+
+Buat celah untuk baris yang 5pxtinggi.
+<style>
+    .d1 {
+        background: LightSkyBlue;
+    }
+
+    .d2 {
+        background: LightSalmon;
+    }
+
+    .d3 {
+        background: PaleTurquoise;
+    }
+
+    .d4 {
+        background: LightPink;
+    }
+
+    .d5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* Only change code below this line */
+        grid-row-gap: 5px;
+
+        /* Only change code above this line */
+    }
+</style>
+
+<div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+</div>
+<!-- ============= -->
+<h1></h1>
+Tambahkan Kesenjangan Lebih Cepat dengan celah kisi
+grid-gapadalah properti singkatan untuk grid-row-gapdan grid-column-gapdari dua tantangan sebelumnya yang lebih nyaman digunakan. Jika grid-gapmemiliki satu nilai, itu akan membuat celah antara semua baris dan kolom. Namun, jika ada dua nilai, itu akan menggunakan yang pertama untuk mengatur jarak antara baris dan nilai kedua untuk kolom.
+
+Gunakan grid-gapuntuk memperkenalkan 10pxcelah antara baris dan 20pxcelah antara kolom.
+<style>
+    .d1 {
+        background: LightSkyBlue;
+    }
+
+    .d2 {
+        background: LightSalmon;
+    }
+
+    .d3 {
+        background: PaleTurquoise;
+    }
+
+    .d4 {
+        background: LightPink;
+    }
+
+    .d5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* Only change code below this line */
+
+        grid-gap: 10px 20px;
+        /* Only change code above this line */
+    }
+</style>
+<div class="container">
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+</div>
