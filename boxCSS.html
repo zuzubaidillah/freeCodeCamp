@@ -350,3 +350,832 @@ Gunakan grid-gapuntuk memperkenalkan 10pxcelah antara baris dan 20pxcelah antara
     <div class="d4">4</div>
     <div class="d5">5</div>
 </div>
+<!-- ===================== -->
+<h1></h1>
+Gunakan kolom-grid untuk Mengontrol Spasi
+Sampai saat ini, semua properti yang telah dibahas adalah untuk wadah kotak. The grid-columnproperti adalah yang pertama untuk digunakan pada item jaringan sendiri.
+
+Garis horizontal dan vertikal hipotetis yang menciptakan grid disebut sebagai garis . Garis-garis ini diberi nomor dimulai dengan 1 di sudut kiri atas kisi dan bergerak ke kanan untuk kolom dan ke bawah untuk baris, menghitung ke atas.
+
+Ini adalah tampilan garis untuk kisi 3x3:
+
+garis kolom1234baris baris1234
+Untuk mengontrol jumlah kolom yang akan digunakan item, Anda dapat menggunakan grid-columnproperti bersama dengan nomor baris yang Anda inginkan untuk memulai dan menghentikan item.
+
+Berikut ini contohnya:
+
+grid-column: 1 / 3;
+Ini akan membuat item mulai pada garis vertikal pertama dari grid di sebelah kiri dan merentang ke baris ketiga dari grid, memakan dua kolom.
+
+Buat item dengan kelas item5menggunakan dua kolom terakhir dari kisi.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+        /* Only change code below this line */
+        grid-column: 2/4;
+        /* Only change code above this line */
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- ============ -->
+<h1></h1>
+Gunakan baris-kisi untuk Mengontrol Spasi
+Tentu saja, Anda dapat membuat item menggunakan banyak baris seperti halnya dengan kolom. Anda menentukan garis horizontal yang Anda inginkan untuk memulai dan menghentikan item menggunakan grid-rowproperti pada item kisi.
+
+Buat elemen dengan item5kelas mengkonsumsi dua baris terakhir.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+        grid-column: 2 / 4;
+        /* Only change code below this line */
+        grid-row: 2 / 4;
+        /* Only change code above this line */
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- ========= -->
+<h1></h1>
+Sejajarkan Item Secara Vertikal menggunakan align-self
+Sama seperti Anda dapat menyelaraskan item secara horizontal, ada cara untuk menyelaraskan item secara vertikal juga. Untuk melakukan ini, Anda menggunakan align-selfproperti pada item. Properti ini menerima semua nilai yang sama seperti justify-selfdari tantangan terakhir.
+
+Sejajarkan item dengan kelas item3secara vertikal di end.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+        /* Only change code below this line */
+
+        align-self: end;
+        /* Only change code above this line */
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- =========== -->
+<h1></h1>
+Sejajarkan Semua Item Secara Horizontal menggunakan item justify
+Terkadang Anda ingin semua item di Grid CSS Anda memiliki keselarasan yang sama. Anda dapat menggunakan properti yang dipelajari sebelumnya dan menyelaraskannya satu per satu, atau Anda dapat menyelaraskan semuanya sekaligus secara horizontal dengan menggunakan justify-itemswadah kisi Anda. Properti ini dapat menerima semua nilai yang sama yang Anda pelajari dalam dua tantangan sebelumnya, perbedaannya adalah properti ini akan memindahkan semua item di kisi kita ke keselarasan yang diinginkan.
+
+Gunakan properti ini untuk memusatkan semua item kami secara horizontal.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        /* Only change code below this line */
+        justify-items: center;
+
+        /* Only change code above this line */
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- ======== -->
+<h1></h1>
+Sejajarkan Semua Item Secara Vertikal menggunakan align-item
+Menggunakan align-itemsproperti pada wadah kisi akan mengatur perataan vertikal untuk semua item di kisi kita.
+
+Gunakan sekarang untuk memindahkan semua item ke akhir setiap sel.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        /* Only change code below this line */
+        align-items: end;
+        /* Only change code above this line */
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- ============== -->
+<h1></h1>
+Bagilah Grid Menjadi Template Area
+Anda dapat mengelompokkan sel-sel kisi Anda menjadi satu area dan memberi nama khusus pada area tersebut. Lakukan ini dengan menggunakan grid-template-areaspada wadah seperti ini:
+
+grid-template-areas:
+  "header header header"
+  "advert content content"
+  "footer footer footer";
+Kode di atas menggabungkan tiga sel teratas menjadi satu area bernama header, tiga sel terbawah menjadi satu footerarea, dan itu membuat dua area di baris tengah; advertdan content. Catatan: Setiap kata dalam kode mewakili sel dan setiap pasangan tanda kutip mewakili baris. Selain label kustom, Anda dapat menggunakan titik ( .) untuk menentukan sel kosong di kisi.
+
+Tempatkan template area sehingga sel berlabel advertmenjadi sel kosong.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+            /* Only change code below this line */
+            "header header header"
+            ". content content"
+            "footer footer footer";
+        /* Only change code above this line */
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- ================== -->
+<h1></h1>
+Tempatkan Item di Area Grid Menggunakan Properti area grid
+Setelah membuat templat area untuk wadah kisi Anda, seperti yang ditunjukkan pada tantangan sebelumnya, Anda dapat menempatkan item di area khusus Anda dengan merujuk nama yang Anda berikan. Untuk melakukan ini, Anda menggunakan grid-areaproperti pada item seperti ini:
+
+.item1 {
+  grid-area: header;
+}
+Ini membuat grid tahu bahwa Anda ingin item1kelas masuk ke area bernama header. Dalam hal ini, item akan menggunakan seluruh baris atas karena seluruh baris tersebut dinamai sebagai area header.
+
+Tempatkan elemen dengan item5kelas di footerarea menggunakan grid-areaproperti.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+        /* Only change code below this line */
+
+        grid-area: footer;
+        /* Only change code above this line */
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+            "header header header"
+            "advert content content"
+            "footer footer footer";
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- ============== -->
+<h1></h1>
+Gunakan area-grid Tanpa Membuat Template Area
+The grid-areaproperti Anda pelajari di tantangan terakhir dapat digunakan dengan cara lain. Jika kisi Anda tidak memiliki templat area untuk referensi, Anda dapat membuat area dengan cepat untuk item yang akan ditempatkan seperti ini:
+
+item1 { grid-area: 1/1/2/4; }
+Ini menggunakan nomor baris yang Anda pelajari sebelumnya untuk menentukan di mana area untuk item ini. Angka-angka dalam contoh di atas mewakili nilai-nilai ini:
+
+grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
+Jadi item dalam contoh akan menggunakan baris antara baris 1 dan 2, dan kolom antara baris 1 dan 4.
+
+Dengan menggunakan grid-areaproperti, tempatkan elemen dengan item5kelas di antara garis horizontal ketiga dan keempat dan di antara garis vertikal pertama dan keempat.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+        /* Only change code below this line */
+        /* grid-area: row lines/column lines/ */
+        grid-area: 3/1/4/4;
+        /* Only change code above this line */
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- ========= -->
+<h1></h1>
+Kurangi Pengulangan Menggunakan Fungsi pengulangan
+Saat Anda menggunakan grid-template-columnsdan grid-template-rowsuntuk menentukan struktur kisi, Anda memasukkan nilai untuk setiap baris atau kolom yang Anda buat.
+
+Katakanlah Anda menginginkan kisi dengan 100 baris dengan ketinggian yang sama. Sangat tidak praktis untuk memasukkan 100 nilai satu per satu. Untungnya, ada cara yang lebih baik - dengan menggunakan repeatfungsi untuk menentukan berapa kali Anda ingin kolom atau baris Anda diulang, diikuti dengan koma dan nilai yang ingin Anda ulangi.
+
+Berikut adalah contoh yang akan membuat kisi 100 baris, setiap baris dengan tinggi 50px.
+
+grid-template-rows: repeat(100, 50px);
+Anda juga dapat mengulangi beberapa nilai dengan fungsi pengulangan dan menyisipkan fungsi di antara nilai-nilai lain saat mendefinisikan struktur kisi. Berikut tampilannya:
+
+grid-template-columns: repeat(2, 1fr 50px) 20px;
+Ini diterjemahkan menjadi:
+
+grid-template-columns: 1fr 50px 1fr 50px 20px;
+Catatan: Ini 1fr 50pxdiulang dua kali diikuti oleh 20px.
+
+Gunakan repeatuntuk menghapus pengulangan dari grid-template-columnsproperti.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        /* Only change code below this line */
+
+        grid-template-columns: repeat(3, 1fr);
+
+        /* Only change code above this line */
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- =========== -->
+<h1></h1>
+Batasi Ukuran Item Menggunakan Fungsi minmax
+Ada fungsi bawaan lain untuk digunakan grid-template-columnsdan grid-template-rowsdipanggil minmax. Ini digunakan untuk membatasi ukuran item ketika wadah kotak berubah ukuran. Untuk melakukan ini, Anda perlu menentukan kisaran ukuran yang dapat diterima untuk item Anda. Berikut ini contohnya:
+
+grid-template-columns: 100px minmax(50px, 200px);
+Pada kode di atas, grid-template-columnsdiatur untuk membuat dua kolom; yang pertama adalah lebar 100px, dan yang kedua memiliki lebar minimum 50px dan lebar maksimum 200px.
+
+Menggunakan minmaxfungsi, menggantikan 1frdalam repeatfungsi dengan ukuran kolom yang memiliki lebar minimal 90pxdan lebar maksimum 1fr, dan mengubah ukuran panel pratinjau untuk melihat efek.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        /* Only change code below this line */
+
+        grid-template-columns: repeat(3, minmax(90px, 1fr));
+
+        /* Only change code above this line */
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- ============== -->
+<h1></h1>
+Buat Tata Letak Fleksibel Menggunakan IsiOtomatis
+Fungsi pengulangan hadir dengan opsi yang disebut pengisian otomatis . Ini memungkinkan Anda untuk secara otomatis memasukkan sebanyak mungkin baris atau kolom dengan ukuran yang Anda inginkan tergantung pada ukuran wadah. Anda dapat membuat tata letak yang fleksibel saat menggabungkan auto-filldengan minmax, seperti ini:
+
+repeat(auto-fill, minmax(60px, 1fr));
+Ketika wadah berubah ukuran, pengaturan ini terus memasukkan kolom 60px dan meregangkannya hingga dapat memasukkan yang lain. Catatan: Jika penampung Anda tidak dapat memuat semua item Anda dalam satu baris, penampung akan memindahkannya ke yang baru.
+
+Pada kisi pertama, gunakan auto-fillwith repeatuntuk mengisi kisi dengan kolom yang memiliki lebar minimum 60pxdan maksimum 1fr. Kemudian ubah ukuran pratinjau untuk melihat tindakan pengisian otomatis.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 100px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        /* Only change code below this line */
+
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+
+        /* Only change code above this line */
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .container2 {
+        font-size: 40px;
+        min-height: 100px;
+        width: 100%;
+        background: Silver;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(60px, 1fr));
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+</style>
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<div class="container2">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- =============== -->
+<h1></h1>
+Buat Tata Letak Fleksibel Menggunakan auto-fit
+auto-fitbekerja hampir identik dengan auto-fill. Satu-satunya perbedaan adalah ketika ukuran wadah melebihi ukuran semua item yang digabungkan, auto-fillterus memasukkan baris atau kolom kosong dan mendorong item Anda ke samping, sementara auto-fitmenciutkan baris atau kolom kosong itu dan meregangkan item Anda agar sesuai dengan ukuran wadah .
+
+Catatan: Jika penampung Anda tidak dapat memuat semua item Anda dalam satu baris, penampung akan memindahkannya ke yang baru.
+
+Pada kisi kedua, gunakan auto-fitwith repeatuntuk mengisi kisi dengan kolom yang memiliki lebar minimum 60pxdan maksimum 1fr. Kemudian ubah ukuran pratinjau untuk melihat perbedaannya.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+    }
+
+    .item2 {
+        background: LightSalmon;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+    }
+
+    .item4 {
+        background: LightPink;
+    }
+
+    .item5 {
+        background: PaleGreen;
+    }
+
+    .container {
+        font-size: 40px;
+        min-height: 100px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .container2 {
+        font-size: 40px;
+        min-height: 100px;
+        width: 100%;
+        background: Silver;
+        display: grid;
+        /* Only change code below this line */
+
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+
+        /* Only change code above this line */
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<div class="container2">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+<!-- ============= -->
+<h1></h1>
+Gunakan Kueri Media untuk Membuat Tata Letak Responsif
+CSS Grid dapat menjadi cara mudah untuk membuat situs Anda lebih responsif dengan menggunakan kueri media untuk mengatur ulang area grid, mengubah dimensi grid, dan mengatur ulang penempatan item.
+
+Dalam pratinjau, ketika lebar viewport 300px atau lebih, jumlah kolom berubah dari 1 menjadi 2. Area iklan kemudian menempati kolom kiri sepenuhnya.
+
+Jika lebar viewport 400pxlebih dari satu, buat area header menempati baris atas sepenuhnya dan area footer menempati baris bawah sepenuhnya.
+<style>
+    .item1 {
+        background: LightSkyBlue;
+        grid-area: header;
+    }
+
+    .item2 {
+        background: LightSalmon;
+        grid-area: advert;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+        grid-area: content;
+    }
+
+    .item4 {
+        background: lightpink;
+        grid-area: footer;
+    }
+
+    .container {
+        font-size: 1.5em;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas:
+            "header"
+            "advert"
+            "content"
+            "footer";
+    }
+
+    @media (min-width: 300px) {
+        .container {
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "advert header"
+                "advert content"
+                "advert footer";
+        }
+    }
+
+    @media (min-width: 400px) {
+        .container {
+            grid-template-areas:
+                /* Only change code below this line */
+                "header header"
+                "advert content"
+                "footer footer";
+            /* Only change code above this line */
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="item1">header</div>
+    <div class="item2">advert</div>
+    <div class="item3">content</div>
+    <div class="item4">footer</div>
+</div>
+<!-- ================ -->
+<h1></h1>
+Buat Grid di dalam Grid
+Mengubah elemen menjadi kisi hanya memengaruhi perilaku turunan langsungnya. Jadi dengan mengubah turunan langsung menjadi kisi, Anda memiliki kisi di dalam kisi.
+
+Misalnya, dengan mengatur displaydan grid-template-columnsproperti elemen dengan item3kelas, Anda membuat kisi di dalam kisi Anda.
+
+Ubah elemen dengan item3kelas menjadi kisi dengan dua kolom dengan lebar autodan 1frmenggunakan displaydan grid-template-columns.
+<style>
+    .container {
+        font-size: 1.5em;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas:
+            "advert header"
+            "advert content"
+            "advert footer";
+    }
+
+    .item1 {
+        background: LightSkyBlue;
+        grid-area: header;
+    }
+
+    .item2 {
+        background: LightSalmon;
+        grid-area: advert;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+        grid-area: content;
+        /* Only change code below this line */
+        display: grid;
+        grid-template-columns: auto 1fr;
+        /* Only change code above this line */
+    }
+
+    .item4 {
+        background: lightpink;
+        grid-area: footer;
+    }
+
+    .itemOne {
+        background: PaleGreen;
+    }
+
+    .itemTwo {
+        background: BlanchedAlmond;
+    }
+</style>
+
+<div class="container">
+    <div class="item1">header</div>
+    <div class="item2">advert</div>
+    <div class="item3">
+        <div class="itemOne">dasdfasdf sdfa sdf sadf sadf asdfsa fsda fsa dfsd fsda fsadfs </div>
+        <div class="itemTwo">paragraph2</div>
+    </div>
+    <div class="item4">footer</div>
+</div>
