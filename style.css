@@ -1,0 +1,135 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        .bg-title-image {
+            margin: 50px 50px 0px 50px;
+            border-radius: 50px;
+            height: 430px;
+            display: flex;
+            flex-direction: row;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(69, 69, 179, 0.95) 0%, rgba(150, 235, 255, 0.8) 100%);
+        }
+
+        .bg-title-image .bg-title {
+            flex-basis: 50%;
+            color: #fff;
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+
+        .bg-title-image .bg-title h1 {
+            font-size: 4rem;
+        }
+
+        .bg-title-image .bg-title p {
+            font-size: 1.6rem;
+        }
+
+
+        .bg-title-image .bg-img-caption {
+            flex-basis: 50%;
+            text-align: center;
+            top: 50px;
+        }
+
+        .bg-title-image .bg-img-caption #img-div img {
+            height: auto;
+            position: relative;
+            top: -20px;
+            border-radius: 25px;
+            align-items: center;
+        }
+
+        .list-school {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(276deg, rgba(2, 0, 36, 1) 0%, rgba(196, 196, 208, 0.9608330392703957) 0%, rgba(216, 226, 228, 0.7955669328278187) 100%);
+            width: 70%;
+            height: 150px;
+            border-radius: 10px;
+            position: relative;
+            align-self: center;
+            margin-bottom: 50px;
+            display: flex;
+            top: -80px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+            top: -50px;
+            position: relative;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: row;
+            flex-basis: 33.305%;
+            align-self: center;
+            justify-content: center;
+        }
+
+        .icon {
+            margin-right: 20px;
+        }
+
+        .text-box p {
+            font-size: 1.3rem;
+        }
+
+        .roww {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 10px;
+            align-items: center;
+            justify-items: center;
+            margin-top: 0;
+        }
+
+        .coll {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 50px;
+        }
+
+        .iconn {
+            margin-right: 10px;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: #ffc0c0;
+            text-align: center;
+            vertical-align: middle;
+            align-self: center;
+        }
+
+        .captionn {
+            align-self: center;
+            margin-left: 40px;
+            max-width: 290px;
+        }
+
+        .captionn h3 {
+            font-size: 2rem;
+            color: rgb(31, 31, 31);
+        }
+
+        .captionn p {
+            color: rgb(87, 87, 87);
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 65%;
+            display: block;
+            height: auto;
+            margin: 0 auto;
+        }

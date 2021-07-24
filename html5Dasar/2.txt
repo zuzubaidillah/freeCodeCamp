@@ -1,0 +1,20 @@
+Ucapkan Halo pada Elemen HTMLLulus
+Selamat datang di tantangan pengkodean HTML freeCodeCamp. Ini akan memandu Anda melalui pengembangan web langkah demi langkah.
+
+Pertama, Anda akan mulai dengan membangun halaman web sederhana menggunakan HTML. Anda dapat mengedit kode di editor kode Anda, yang disematkan ke halaman web ini.
+
+Apakah Anda melihat kode di editor kode Anda yang mengatakan <h1>Hello</h1>? Itu adalah elemen HTML.
+
+Sebagian besar elemen HTML memiliki tag pembuka dan tag penutup.
+
+Tag pembuka terlihat seperti ini:
+
+<h1>
+Tag penutup terlihat seperti ini:
+
+</h1>
+Satu-satunya perbedaan antara tag pembuka dan penutup adalah garis miring setelah tanda kurung buka dari tag penutup.
+
+Setiap tantangan memiliki tes yang dapat Anda jalankan kapan saja dengan mengklik tombol "Jalankan tes". Ketika Anda lulus semua tes, Anda akan diminta untuk mengirimkan solusi Anda dan pergi ke tantangan coding berikutnya.
+
+Untuk lulus ujian pada tantangan ini, ubah h1teks elemen Anda menjadi Hello World.
